@@ -17,15 +17,29 @@ now we have to enter in our own created file name marksinfo by using a command c
 ### STEP 3:
 now we have to copy the theia link and add it in admin paste that in new app to get the output and enter the user name and password and the details ew created in the terminal
 
-Write your own steps
+
 
 ## PROGRAM
+```
+from django.db import models
+from django.contrib import admin
+class Marks(models.Model):
+    studentid = models.CharField(max_length=8,primary_key=True)
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    email = models.EmailField()
+    marks = models.IntegerField()
+class MarksAdmin(admin.ModelAdmin):
+    list_display = ('studentid','name','age','email','marks')
+```
 
-Include your code here
+
+
 
 ## OUTPUT
-![entity diagram](./images/clientserveroutput.png)
-![entity diagram](./images/serversideoutput.png)
+
+![server side output](./images/serversideoutput.png)
+![client side output](./images/clientserveroutput.png)
 
 
 
